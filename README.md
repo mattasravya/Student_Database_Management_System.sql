@@ -1,21 +1,32 @@
-# Student Database Management System (MySQL)
+# Student Database Management System (Java & MySQL JDBC)
 
-This is a beginner-level SQL project created to practice database design and basic SQL operations using MySQL.
+A multi-tier database management application built using Java and MySQL, featuring full JDBC integration, normalized relational schema design, and transactional data processing.
 
 ## Project Overview
-The project manages student, course, and enrollment information using a relational database.  
-It demonstrates how real-world data can be stored and analyzed using SQL queries.
+This project manages student details, course catalogs, and academic enrollments using a relational database architecture. It demonstrates complete end-to-end data persistence, featuring parameterized SQL operations in Java to prevent security vulnerabilities and execute analytical reporting queries.
 
-## Features
-- Stores student details such as name, age, gender, city, and marks
-- Stores course information with duration
-- Manages student-course enrollments
-- Performs basic CRUD operations
-- Uses JOINs and aggregate functions for data analysis
+## Key Features
+- **Relational Database Design:** Normalized schema with primary keys, foreign key constraints, check validations, and `ON DELETE CASCADE` rules.
+- **JDBC Data Persistence:** Built using the Data Access Object (DAO) pattern in Java with `PreparedStatement` to execute secure, injection-safe CRUD operations.
+- **Advanced Querying & Analytics:** Formatted SQL joins, window functions (`DENSE_RANK`), and aggregation (`GROUP_CONCAT`) for dynamic reporting.
+- **Transactional Integrity:** Enforces entity and referential integrity across student profiles and course enrollments.
 
 ## Technologies Used
-- MySQL
-- MySQL Workbench
+- **Programming Language:** Java (JDK 17+)
+- **Database:** MySQL Server 8.0+, MySQL Workbench
+- **Database Driver:** MySQL Connector/J (`mysql-connector-j-8.x.x.jar`)
+- **Architecture:** DAO (Data Access Object) Pattern
+
+## Database Schema Structure
+- `student`: Stores student demographics, location, and academic marks.
+- `course`: Stores course details and course duration.
+- `enrollment`: Junction table linking students to registered courses with primary/foreign key relationships.
+
+## How to Run
+1. Execute `schema.sql` in MySQL Workbench to create the `student_db` database and tables.
+2. Configure database credentials (`URL`, `USER`, `PASSWORD`) in `src/DBConnection.java`.
+3. Add the `mysql-connector-j.jar` file to your Java project's classpath / referenced libraries.
+4. Compile and run `src/StudentDAO.java` to test database operations.
 
 ## Database Structure
 - **students** – stores student details  
