@@ -1,6 +1,3 @@
-# Student Database Management System (Java & MySQL JDBC)
-
-A multi-tier database management application built using Java and MySQL, featuring full JDBC integration, normalized relational schema design, and transactional data processing.
 
 ## Project Overview
 This project manages student details, course catalogs, and academic enrollments using a relational database architecture. It demonstrates complete end-to-end data persistence, featuring parameterized SQL operations in Java to prevent security vulnerabilities and execute analytical reporting queries.
